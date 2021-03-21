@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="info" style='display:none'></div>
+    <div id="canvas-wrapper">
+      <canvas id="output" style=""></canvas>
+      <video id="video" playsinline></video>
+    </div>
+    <div>
+      <button onclick="recordRockGesture()">Record rock</button>
+      <button onclick="recordPaperGesture()">Record paper</button>
+      <button onclick="recordScissorsGesture()">Record scissors</button>
+      <button onclick="showData()">Show data</button>
+    </div>
+    <div>
+      <button onclick="trainNetwork()">Train Network</button>
+      <button onclick="recognizeGesture()">Recognize gesture</button>
+    </div>
+    <div>
+      <p id="recognizedGesture">Result: none</p>
+    </div>
+    <script src="./scripts/brain-browser.min.js"></script>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/getProportions.js"></script>
+    <script src="./scripts/getProportionsLimited.js"></script>
+    <script src="./scripts/buttonFunc.js"></script>
+    <script src="./scripts/prediction.js"></script>
+    <script src="./scripts/drawing.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
